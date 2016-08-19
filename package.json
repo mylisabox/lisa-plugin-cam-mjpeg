@@ -14,9 +14,10 @@
     "eslint": "^3.3.1",
     "eslint-config-trails": "^1.0.7",
     "lisa-box": "latest",
+    "lodash": "^4.15.0",
     "mocha": "^3.0.2",
     "smokesignals": "^1.2.2",
-    "trails": "latest",
-    "snyk": "^1.18.0"
+    "snyk": "^1.18.0",
+    "trails": "latest"
   }
 }
