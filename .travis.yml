@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- 4
+- 5
+- 6
+notifications:
+  email: false
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/117063f9c1031b17e557
+    on_start: never
+    on_failure: change
+deploy:
+  provider: npm
+  email: hello@mylisabox.com
+  api_key:
+    secure: LPhZc+/NI9MrV4AUjMYloj6A7IjDc3SMZDuPFEMdZDOPb3M6jjcLWEUMTTPZyk+xB43jQMp9R8sjSh92wrSH9G60Cme7gE/NnkhGzF8BezkJSQiVDoOIRBce5zPMpGaRantW/S/RQfgSDZN0WbwXmtoaB8eDE14tPUKCAHu4uRTSXFIf3r7ziZ6yxGUd8x6W4aF+ofQ7H8AAuNedFi4z5Psa2jvumCl9bswl1zS6nqLJ21G4e6lK6pmFc9TYUiAdMnOkoCV+CukmN+888Gu2GK9y27QD5r8ypXiGuJ7PXZ7d761BZ0OgONFFE4mduEtp7q0dIiiga09Tn9IpDg1NARN/8/vS0OEqeItluYVbm3ear8TW+jpYZ29cXQbCmnsgT2wMW0NoUGcUhIkti9fi6Bi9Gh9ksoL6vXMGsZSl9dD6pY7lhooIotbc9Ir+5g9uPFdcklNvP2P6PYTGXepIjBo9/FupfcfOzZJsFG8Y+N4fgQnp6mJOmZNQarRZ7xbTMg3VZdQ0yhQCjmxO7Lfu7mHudbO58kaXI14eM/E3xgw7JbjCZBRJLOSEXXvvKtjzInKq2E+IPqAxhZUJ9NODzwjfHllRiUcKgSTaNCKOhlSrlFvKFcxLkRH5zM/fTBG7/00h/X9GK1Mt05YRslj2ygzMyD+5iDg6m/khCK6uy+U=
+  on:
+    tags: true
+    repo: mylisabox/lisa-plugin-cam-mjpeg
