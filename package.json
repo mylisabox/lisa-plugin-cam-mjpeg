@@ -9,7 +9,7 @@
     "extends": "trails"
   },
   "dependencies": {
-    "lisa-plugin": "^0.0.12"
+    "lisa-plugin": "0.0.12"
   },
   "devDependencies": {
     "eslint": "^3.3.1",
