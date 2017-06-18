@@ -1,5 +1,6 @@
 'use strict'
 
+/*
 const lisaApp = require('lisa-box')
 const TrailsApp = require('trails')
 
@@ -11,3 +12,4 @@ before(() => {
 after(() => {
   return global.app.stop()
 })
+ */

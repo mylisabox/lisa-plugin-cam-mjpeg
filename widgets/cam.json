@@ -1,0 +1,12 @@
+{
+  "type": "vbox",
+  "children": [
+    {
+      "type": "camera",
+      "flex": 1,
+      "name": "cam",
+      "image": "image",
+      "video": "video"
+    }
+  ]
+}

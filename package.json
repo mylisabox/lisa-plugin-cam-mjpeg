@@ -1,23 +1,20 @@
 {
   "name": "lisa-plugin-cam-mjpeg",
   "main": "index.js",
+  "version": "0.0.1",
   "scripts": {
-    "test": "snyk test && eslint . && mocha"
+    "test": "eslint . && mocha"
   },
   "eslintConfig": {
     "extends": "trails"
   },
   "dependencies": {
-    "lisa-plugin": "latest"
+    "lisa-plugin": "^0.0.12"
   },
   "devDependencies": {
     "eslint": "^3.3.1",
     "eslint-config-trails": "^1.0.7",
-    "lisa-box": "latest",
-    "lodash": "^4.15.0",
     "mocha": "^3.0.2",
-    "smokesignals": "^1.2.2",
-    "snyk": "^1.18.0",
-    "trails": "latest"
+    "snyk": "^1.18.0"
   }
 }
