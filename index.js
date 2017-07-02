@@ -10,16 +10,8 @@ module.exports = class MjpegCamPlugin extends Plugin {
    * @returns Promise
    */
   init() {
-    return this.services.CamService.init()
+    return super.init()
   }
-
-  /**
-   * Called automatically to search for new devices
-   * @return Promise
-
-  searchDevices() {
-    return this.services.CamService.search()
-  }*/
 
   /**
    * Called when
@@ -33,7 +25,7 @@ module.exports = class MjpegCamPlugin extends Plugin {
 
   constructor(app) {
     super(app, {
-      api: require('./api'),
+      drivers: require('./drivers'),
       config: require('./config'),
       pkg: require('./package')
     })

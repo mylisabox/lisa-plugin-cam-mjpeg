@@ -11,15 +11,11 @@ module.exports = [
       en: 'Add an IP Camera with MJPG stream',
       fr: 'Ajout d\'une caméra IP avec un flux MJPG'
     },
+    driver: 'cam',
+    type: 'camera',
     pairing: 'settings',
+    template: template,
     settings: [
-      {
-        controlType: 'textbox',
-        type: 'hidden',
-        name: 'template',
-        defaultValue: template,
-        required: true
-      },
       {
         controlType: 'textbox',
         type: 'url',
