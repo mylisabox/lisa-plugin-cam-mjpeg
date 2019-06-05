@@ -1,12 +1,11 @@
 {
-  "type": "vbox",
+  "type": "column",
   "children": [
     {
       "type": "camera",
       "flex": 1,
-      "name": "cam",
-      "image": "image",
-      "video": "video"
+      "id": "camera",
+      "stream": "$video$"
     }
   ]
 }
