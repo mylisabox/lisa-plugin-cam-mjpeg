@@ -15,36 +15,39 @@ module.exports = [
     type: 'camera',
     pairing: 'settings',
     template: template,
-    settings: [
-      {
-        controlType: 'textbox',
-        type: 'url',
-        name: 'video',
-        label: {
-          en: 'Stream URL'
+    settings: {
+      'type': 'column',
+      'crossAxisAlignment': 3,
+      'children': [
+        {
+          'type': 'text_field',
+          'id': 'video',
+          'required': true,
+          'errorMaxLines': 2,
+          'validator': 'https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)',
+          'textInputAction': 6,
+          'decoration': {
+            'labelText': 'Url*',
+          }
         },
-        required: true
-      },
-      {
-        controlType: 'textbox',
-        type: 'text',
-        name: 'login',
-        label: {
-          en: 'Login',
-          fr: 'Identifiant'
+        {
+          'type': 'text_field',
+          'id': 'login',
+          'textInputAction': 6,
+          'decoration': {
+            'labelText': 'Login',
+          }
         },
-        private: true
-      },
-      {
-        controlType: 'textbox',
-        type: 'password',
-        name: 'password',
-        label: {
-          en: 'Password',
-          fr: 'Mot de passe'
+        {
+          'type': 'text_field',
+          'id': 'password',
+          'obscureText': true,
+          'textInputAction': 2,
+          'decoration': {
+            'labelText': 'Password',
+          }
         },
-        private: true
-      }
-    ]
+      ],
+    },
   }
 ]
