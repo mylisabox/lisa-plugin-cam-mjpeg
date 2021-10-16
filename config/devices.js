@@ -1,20 +1,25 @@
+import {createRequire} from 'module';
+
+const require = createRequire(import.meta.url);
 const template = require('../widgets/cam.json')
 
-module.exports = [
+export default [
   {
-    image: 'camera_ip.png',
     name: {
       en: 'IP Camera MJPG',
-      fr: 'Caméra IP MJPG'
+      fr: 'Caméra IP MJPG',
     },
     description: {
       en: 'Add an IP Camera with MJPG stream',
-      fr: 'Ajout d\'une caméra IP avec un flux MJPG'
+      fr: 'Ajout d\'une caméra IP avec un flux MJPG',
     },
     driver: 'cam',
-    type: 'camera',
+    type: 'webcam',
     pairing: 'settings',
+    image: 'webcam.svg',
     template: template,
+    imageOn: 'webcam.svg',
+    imageOff: 'webcam.svg',
     settings: {
       'type': 'column',
       'crossAxisAlignment': 3,
@@ -28,7 +33,7 @@ module.exports = [
           'textInputAction': 6,
           'decoration': {
             'labelText': 'Url*',
-          }
+          },
         },
         {
           'type': 'text_field',
@@ -36,7 +41,7 @@ module.exports = [
           'textInputAction': 6,
           'decoration': {
             'labelText': 'Login',
-          }
+          },
         },
         {
           'type': 'text_field',
@@ -45,9 +50,9 @@ module.exports = [
           'textInputAction': 2,
           'decoration': {
             'labelText': 'Password',
-          }
+          },
         },
       ],
     },
-  }
+  },
 ]

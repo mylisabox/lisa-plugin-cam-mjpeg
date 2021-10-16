@@ -1,1 +1,5 @@
-exports.cam = require('./cam')
+import cam from './cam.js'
+
+export default {
+  'cam': cam
+}

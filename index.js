@@ -1,13 +1,16 @@
-'use strict'
+import {Plugin} from 'lisa-plugin'
+import {createRequire} from 'module';
+import config from './config/index.js'
+import drivers from './drivers/index.js'
 
-const Plugin = require('lisa-plugin')
+const require = createRequire(import.meta.url);
+const pkg = require('./package.json');
 
-module.exports = class MjpegCamPlugin extends Plugin {
-
+export default class MjpegCamPlugin extends Plugin {
   /**
    * Initialisation of your plugin
    * Called once, when plugin is loaded
-   * @returns Promise
+   * @return Promise
    */
   init() {
     return super.init()
@@ -25,9 +28,9 @@ module.exports = class MjpegCamPlugin extends Plugin {
 
   constructor(app) {
     super(app, {
-      drivers: require('./drivers'),
-      config: require('./config'),
-      pkg: require('./package')
+      drivers: drivers,
+      config: config,
+      pkg: pkg,
     })
   }
 }

@@ -1,7 +1,5 @@
-'use strict'
+import {Driver} from 'lisa-plugin'
 
-const Driver = require('lisa-plugin').Driver
-
-module.exports = class CamDriver extends Driver {
+export default class CamDriver extends Driver {
 
 }
